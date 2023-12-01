@@ -1,0 +1,293 @@
+
+body{
+margin: 0px;
+}
+
+nav {
+    background-color: black;
+    width:100%;
+    height:10vh;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+top: 0;
+left: 0;
+right: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 0;
+    height: 100%;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 3px;
+    padding-top: 4vh;
+    color: #fff;
+    text-decoration: none;
+    
+  }
+ nav li :hover{
+    background-color: white;
+    color: black;
+    height: 8vh;
+    margin-top: 0%;
+    width: 24vh;
+    
+  } 
+
+  /* --------------------------------- carousel css ------------------------------------- */
+#carousel{
+  margin-top:12vh;
+
+}
+
+  .mySlides {
+    display: none;
+}
+/* Slideshow container */
+.carousel_container {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+/* The dots/bullets/indicators */
+.carousel_dot {
+
+    height: 15px;
+    width: 15px;
+    margin: 36px 2px;
+    background-color: #443d3d;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .carousel_prev,
+    .carousel_next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* Next & previous buttons */
+.carousel_prev,
+.carousel_next {
+    cursor: pointer;
+    position: absolute;
+    top: 110%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.carousel_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.carousel_prev:hover,
+.carousel_next:hover {
+    background-color: rgba(107, 103, 103, 0.5);
+}
+/* -------------------------------------------------AbOUT US SECTION ----------------------------------------------------------- */
+.about {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  
+  margin-bottom: 20px;
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  font-family: "Playfair Display", serif;
+  background-color: #9703f478;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-clip: text;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+.about-image img {
+  width: 45vh;
+    margin-left: 3vh;
+    height: 45vh;
+  
+}
+
+/* ------------------------------------------------footer----------------------------------------------------- */
+footer {
+  background-color: #080202;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+  /*----------------------------------- media querry1-------------------------------------- */
+
+  @media only screen and (min-width: 320px) and (max-width: 480px)  {
+    body{
+      
+      margin:0px;
+    }
+    #logo {
+      width: 100%;
+      background-color: white;
+      height: 13vh;
+      margin:0px 0px 0px 0px;
+    }
+  
+    nav {
+      background-color:black;
+      height: 20vh;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0%;
+      
+    }
+  
+    nav ul {
+      padding: 0px;
+      text-align:center;
+      margin:0px;
+      background-color: black;
+      white-space: nowrap;
+      
+    }
+  
+    nav li {
+      list-style-type: none;
+  /*     margin: 3vh 0 10px; */
+      margin:0px;
+      padding:0px;
+      width: auto;
+    }
+  
+    nav li a {
+      /* text-decoration: none; */
+      font-size:larger;
+      color: white;
+      background-color: black;
+      display: block;
+      padding: 10px;
+      
+    }
+  
+    nav li:hover a {
+      background-color: brown;
+    }
+    .about-text {
+      
+      flex-direction: column;
+      
+    }
+    footer {
+    width:100%;
+    }
+
+    
+  }
+  @media only screen and (min-width: 481px) and (max-width: 708px){
+
+    nav {
+      height:12vh;
+      
+    }
+    #logo{
+      height: 12vh;
+      width: 27vh;
+      float: left;
+  }
+
+  
+  
+
+  }
+  @media only screen and (min-width: 709px) {
+    nav {
+      height:12vh;
+      
+    }
+     #logo{
+      height:12vh;
+      width:300px;
+      float: left;
+  } 
+  
+  }

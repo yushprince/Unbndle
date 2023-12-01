@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="logoc.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Geeks</title>
+  <link rel="stylesheet" href="task1.css">
+    </head>
+    <body>
+        <section id="nav_section">
+            <nav>
+              <div id="navigation">
+                <div>
+                  <img id="logo" src="logo.png" />
+                </div>
+                <div>
+                  <ul>
+                    <li><a href="#" target="_blank">Shop Online</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#" target="_blank">About us</a></li>
+                    <li><a href="#" target="_blank">Contact us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </section>
+          <div id="banner">
+            <img src="tech_geeks.png" style="width: 100%;height: 50vh;"/>
+          </div>
+
+          <section id="carousel">
+            <div class="carousel_container">
+              <div class="carousel_mySlides fade">
+                  <img src="smartphone_1.jfif" style="width: 100%;height: 75vh">
+      
+              </div>
+              <div class="carousel_mySlides fade">
+                <img src="Smartphone.jfif" style="width: 100%;height: 75vh">
+    
+              </div>
+              <div class="carousel_mySlides fade">
+      
+                  <img src="Lapptop.jfif" style="width: 100%;height: 75vh">
+      
+              </div>
+              <div class="carousel_mySlides fade">
+      
+                  <img src="laptop_1.jpg" style="width: 100%;height: 75vh">
+      
+              </div>
+              <div class="carousel_mySlides fade">
+      
+                <img src="headphone.jpg" style="width: 100%;height: 75vh">
+    
+            </div>
+            <div class="carousel_mySlides fade">
+      
+              <img src="headphone_1.jpg" style="width: 100%;height: 75vh">
+  
+          </div>
+          
+
+
+              <div style="text-align:center; margin:-5vh; width: 100%;">
+      
+                  <span class="carousel_dot"></span>
+                  <span class="carousel_dot"></span>
+                  <span class="carousel_dot"></span>
+                  <span class="carousel_dot"></span>
+                  <span class="carousel_dot"></span>
+                  <span class="carousel_dot"></span>
+      
+              </div>
+              <a class="carousel_prev" onclick="prevSlide()">&#10094;</a>
+              <a class="carousel_next" onclick="showSlides()">&#10095;</a>
+          </div>
+          </section>
+
+          <section class="about">
+            <div class="about-text">
+              <div class="about-image" style="    align-self: center;">
+                <img src="Dublin.png" alt="Profile Picture">
+              </div>
+              <div style="    padding: 0vh 2vh;">
+              <h2>About Us</h2>
+              <p>Welcome to <strong>Tech Geeks</strong>, a distinguished name in the world of artisanal confections. With a rich legacy dating back to our founding, we take pride in crafting premium Products that embody the perfect blend of techniqus and innovation.</p>
+              <p>At Tech Geeks, our commitment to excellence is evident in every handcrafted creation. We meticulously select the finest technoloy, ensuring that each Products delivers a sensorial journey of unparalleled performance and quality. Our techgeekers, driven by a passion for their craft, bring expertise and creativity to every aspect of the product-making process.</p>
+              <p>As a company deeply rooted in our community, sustainability and ethical practices are at the core of our values. We believe in creating not just exquisite accessories but also fostering a positive impact on the world around us. Join us on this delectable journey, and experience the true essence of tech geeks – where quality, craftsmanship, and community converge.</p>
+              </div></div>
+          </section>
+
+          <footer>
+            <p>&copy; 2023 tech_Geeks's. All rights reserved.</p>
+            <p>Created by Satyendra Yadav</p>
+          </footer>
+
+    </body>
+    <script>
+              var timeOut = 2000;
+        var carousel_slideIndex = 0;
+        var autoOn = true;
+
+        autoSlides();
+
+        function autoSlides() {
+            timeOut = timeOut - 20;
+
+            if (autoOn == true && timeOut < 0) {
+                showSlides();
+            }
+            setTimeout(autoSlides, 20);
+        }
+
+        function prevSlide() {
+
+            timeOut = 2000;
+
+            var carousel_slides = document.getElementsByClassName("carousel_mySlides");
+            var carousel_dots = document.getElementsByClassName("carousel_dot");
+
+            for (i = 0; i < carousel_slides.length; i++) {
+              carousel_slides[i].style.display = "none";
+              carousel_dots[i].className = carousel_dots[i].className.replace(" active", "");
+            }
+            carousel_slideIndex--;
+
+            if (carousel_slideIndex > carousel_slides.length) {
+              carousel_slideIndex = 1
+            }
+            if (carousel_slideIndex == 0) {
+              carousel_slideIndex = 3
+            }
+            carousel_slides[carousel_slideIndex - 1].style.display = "block";
+            carousel_dots[carousel_slideIndex - 1].className += " active";
+        }
+
+        function showSlides() {
+
+            timeOut = 2000;
+
+            var carousel_slides = document.getElementsByClassName("carousel_mySlides");
+            var carousel_dots = document.getElementsByClassName("carousel_dot");
+
+            for (i = 0; i < carousel_slides.length; i++) {
+              carousel_slides[i].style.display = "none";
+              carousel_dots[i].className = carousel_dots[i].className.replace(" active", "");
+            }
+            carousel_slideIndex++;
+
+            if (carousel_slideIndex > carousel_slides.length) {
+              carousel_slideIndex = 1
+            }
+            carousel_slides[carousel_slideIndex - 1].style.display = "block";
+            carousel_dots[carousel_slideIndex - 1].className += " active";
+        }
+    </script>
+</html>
